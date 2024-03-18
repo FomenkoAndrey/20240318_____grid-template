@@ -1,0 +1,50 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  font-family: $font-main;
+  font-size: $font-size;
+}
+
+body {
+  color: $color-gray;
+  background-color: $color-white;
+}
+
+h1 {
+  font-family: $font-header;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.078em;
+  line-height: 1.2em;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+  @include md {
+    font-size: 1.875rem;
+  }
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+}
