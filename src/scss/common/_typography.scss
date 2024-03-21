@@ -9,6 +9,7 @@
 
 html {
   overflow-y: scroll;
+
   font-family: $font-main;
   font-size: $font-size;
 }
@@ -19,10 +20,11 @@ body {
 }
 
 h1 {
-  font-family: $font-header;
-  font-weight: 300;
   text-align: center;
   letter-spacing: 0.078em;
+
+  font-family: $font-header;
+  font-weight: 300;
   line-height: 1.2em;
 
   @include lg-min {
@@ -36,15 +38,12 @@ h1 {
   }
 }
 
-h2 {
 
-}
 
-h3 {
 
-}
 
 a {
-  color: $color-white;
   text-decoration: none;
+
+  color: $color-white;
 }

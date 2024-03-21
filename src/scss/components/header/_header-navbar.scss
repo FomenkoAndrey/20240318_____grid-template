@@ -4,27 +4,47 @@
 .header-navbar {
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
     justify-content: end;
+
     gap: $gap;
-
-    @include unlist(0 -10px 0);
-
+    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
+    @include md-min {
+      @include unlist(0 -10px 0);
+    }
     @include md {
+      position: absolute;
+      top: 100%;
+      right: $gap;
+
       display: none;
+
+      background-color: rgba($color-gray-dark, 0.95);
+
+      @include unlist;
+      @include box-shadow;
     }
   }
 
   &__item {
-
+    @include md {
+      margin: $gap $gap-sm;
+    }
   }
 
   &__link {
     display: block;
-    padding: $gap-sm;
-    font-size: 1.125rem;
-    letter-spacing: 0.09em;
+
     transition: color 0.3s;
+    letter-spacing: 0.09em;
+
+    font-size: 1.125rem;
+
+    @include md-min {
+      padding: $gap-sm;
+    }
+    @include md {
+      padding: $gap-sm $gap;
+    }
 
     &:hover,
     &:focus {
@@ -37,9 +57,9 @@
 
     width: 40px;
     height: 30px;
+    margin-left: auto;
 
     cursor: pointer;
-    margin-left: auto;
 
     @include md-min {
       display: none;
