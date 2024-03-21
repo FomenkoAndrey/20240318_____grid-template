@@ -9,6 +9,9 @@
   z-index: 2;
   padding: $gap 0;
 
+  background-color: rgba($color-gray-dark, 0.25);
+  box-shadow: 0 3px 20px -10px $color-black;
+
   &__container {
     display: grid;
     gap: $gap;
